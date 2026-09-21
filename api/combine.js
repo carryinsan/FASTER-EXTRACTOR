@@ -15,13 +15,13 @@ const EXTRACTOR_URL = 'https://content-tacker.vercel.app/api/extract';
 const JINA_READER_BASE = 'https://r.jina.ai/';
 
 // Global caps to enforce sub-10s responses.
-const TOTAL_TIMEOUT_MS = 15500; 
+const TOTAL_TIMEOUT_MS = 6500; 
 
 // Phase budgets aggressively tuned for fail-fast behavior
-const SEARCH_TIMEOUT_MS = 4500;
+const SEARCH_TIMEOUT_MS = 3500;
 const PREFLIGHT_TIMEOUT_MS = 0;
-const EXTRACTION_TIMEOUT_MS = 8000; // Drastically reduced from 8000ms to prevent bottlenecking
-const JINA_FALLBACK_TIMEOUT_MS = 1800; // Reduced from 2200ms
+const EXTRACTION_TIMEOUT_MS = 3000; // Drastically reduced from 8000ms to prevent bottlenecking
+const JINA_FALLBACK_TIMEOUT_MS = 800; // Reduced from 2200ms
 
 // Strict candidate limits to prevent network saturation
 const MAX_AUTO_CANDIDATES = 20; // Reduced from 40. Quality > Quantity for speed.
